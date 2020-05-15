@@ -1,0 +1,120 @@
+.tabs .indicator{
+    background-color: #e2bd01;
+}
+
+body{
+    background-color: #7e57c2;
+}
+
+.titulo{
+    font-size: 1.3rem;
+    margin-left: 5%;
+    margin-right: auto;
+}
+
+.topo-fixo{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.section{
+    padding-top: 125px;
+}
+
+.input-field {
+    color: #000;
+    margin-top: 25px;
+}
+
+::placeholder{
+    color: #fbc02d;
+}
+
+.btnApp{
+    width: 50%;
+    position: relative;
+    margin-top: 30px;
+    left: 25%;
+}
+
+.h5margin{
+    padding-bottom: 15px;
+}
+  
+/* label focus color */
+.input-field input:focus + label {
+    color: #e2bd01 !important;
+}
+  /* label underline focus color */
+div .input-field input:focus {
+    border-bottom: 1px solid #ffd600 !important;
+    box-shadow: 0 1px 0 0 #ffd600 !important
+}
+
+h6.black-text{
+    margin-top: 10px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+#precoGasolina{
+    margin-top: 40px;
+}
+
+div h6.black-text{
+    margin-bottom: 40px;
+}
+
+.h6margin{
+    padding-top: 30px;
+}
+
+.h6Resultado{
+    padding-top: 0px;
+    margin-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+/* valid color */
+.input-field input[type=number].valid {
+    border-bottom: 1px solid #e2bd01;
+    box-shadow: 0 1px 0 0 #e2bd01;
+  }
+  /* invalid color */
+  .input-field input[type=number].invalid {
+    border-bottom: 1px solid #e2bd01;
+    box-shadow: 0 1px 0 0 #e2bd01;
+}
+.input-field{
+    text-align: center;
+    margin-left: 15%;
+    margin-right: 0;
+    margin-top: 0px;
+    padding-top: 0px;
+    width: 70%;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+}
+
+.precosh6{
+    text-align: left;
+    margin-left: 15%;
+    margin-right: 0;
+    margin-top: 25px;
+    width: 70%;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.authorClass{
+    top: 90px;
+    text-align: center;
+    position: fixed;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    padding-top:0px;
+    margin-top:0px;
+}

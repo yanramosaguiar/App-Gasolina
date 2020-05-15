@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html ng-app="appAg">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <title>AV1 App Alcool ou Gasolina</title>
+        <link rel="stylesheet" href="icons/material.css">
+        <link rel="stylesheet" href="css/materialize.min.css">
+        <link rel="stylesheet" href="css/estilos.css"/>
+
+        <script src="js/angular.js"></script>
+        <script src="js/funcoesAngular.js" type="text/javascript"></script>
+    </head>
+    <body ng-controller="appAgController">
+        <div class="topo-fixo z-depth-1">
+            <div class="valign-wrapper deep-purple darken-4 white-text">
+                <h4 class="titulo"><strong>Álcool ou Gasolina?</strong></h4>
+                
+                <div>
+                    <!-- Dropdown Trigger -->
+                    <i class="dropdown-trigger material-icons waves-effect waves-light waves-circle dropdown-button" href="#" data-target="dropdown1" data-constrainwidth="true">more_vert</i>
+                    <!-- Dropdown Structure -->
+                    <ul id="dropdown1" class="dropdown-content deep-purple lighten-5">
+                        <li><a href="#!" class="acao-limpar black-text">Limpar</a></li>
+                        <li class="divider" tabindex="-1"></li>
+
+                        <!-- Modal Trigger -->
+                        <li><a href="#modal1" class="acao-contas black-text waves-effect waves-light modal-trigger" ng-click="exibirModal()">Conta</a></li>
+                        
+                        <li class="divider" tabindex="-1"></li>
+                        <li><a href="#modal2" class="acao-contas black-text waves-effect waves-light modal-trigger" ng-click="exibirModal()">Sobre</a></li>   
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="col s12">
+                <ul class="tabs tabs-fixed-width deep-purple darken-4">
+                    <li class="tab col"><a href="#calculo" class="active white-text waves-effect waves-light">Cálculo</a></li>
+                    <li class="tab col" ><a href="#resultado" class="white-text waves-effect waves-light">Resultado</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        
+
+            <form class="formEntrada">
+                <div id="calculo" class="col s12 section">
+                    <h5 class="container white-text h5margin"><strong>Valores:</strong></h5>
+                    <div class="collection card-panel deep-purple lighten-5">
+
+                        <h6 class="black-text precosh6">Preço do Álcool:</h6>
+                        <div class="input-field">
+                            <input id="idAlcool" type="number" class="validate" ng-model="calculo.alcool">
+                            <label for="idAlcool">Álcool</label>
+                        </div>
+
+                        <h6 class="black-text precosh6">Preço da Gasolina:</h6>
+                        <div class="input-field">
+                            <input id="idGasolina" type="number" class="validate" ng-model="calculo.gasolina">
+                            <label for="idGasolina">Gasolina</label>
+                        </div>
+                        
+                        <!--Button-->
+                        <a class="waves-effect waves-light btn-large btn-flat yellow darken-1 black-text btnApp" href="#resultado" id="btnCalcular" ng-click="calcular()">Calcular</a>
+                    </div>
+                    
+                    
+                </div>
+        
+                <div id="resultado" class="col s12 section" ng-show="exibeResultados">
+                    <h5 class="container white-text h5margin"><strong>Resultado do cálculo:</strong></h5>
+                    
+                    <div class="collection card-panel deep-purple lighten-5">
+                        <h6 class="black-text h6Resultado precosh6"><strong>Resultado:</strong><br><br>{{resultado | number:5}}</h6>
+                        <hr><br>
+                        <h6 class="black-text h6Resultado precosh6"><strong>Opção:</strong><br><br>{{opcao}}</h6>
+                        <hr><br>
+                        <a class="waves-effect waves-light btn-large btn-flat yellow darken-1 black-text btnApp" href="#calculo" id="btnVoltar" ng-click="voltar()">Voltar</a>
+                    </div>
+                </div>
+            </form>
+    
+            <!-- Modal Structure -->
+            <div id="modal1" class="modal">
+                <div class="modal-content yellow lighten-1">
+                    <h4>Como é feito o cálculo?</h4>
+                    <p>O cálculo é realizado a partir da divisão do preço do <strong class="blue-text text-darken-3">álcool</strong> pelo preço da <strong class="blue-text text-darken-3">gasolina</strong>.<br>
+                        <br>Se o resultado retornar menor do que <strong class="purple-text text-darken-3">0,7</strong> então a resposta é vantajosa para <strong class="blue-text text-darken-3">álcool</strong>.<br>
+                        <br>Caso contrário, a resposta é vantajosa para <strong class="blue-text text-darken-3">gasolina</strong>.
+
+                        <h6><strong class="purple-text">Simples assim!</strong></h6>
+                </div>
+
+            </div>
+                <!-- Modal Structure -->
+                <div id="modal2" class="modal">
+                    <div class="modal-content deep-purple lighten-4">
+                        <h4>Sobre o App</h4>
+                        <i class="material-icons medium">account_box</i><span class="authorClass">Autor: <a href="https://github.com/robertkoch117"><strong class="blue-text text-darken-3">Robert Almeida Koch</strong><br></span></a>
+                        <br><p> Data: 30/03/2020</p>
+                    </div>
+                
+                </div>
+        
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/materialize.min.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>
